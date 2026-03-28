@@ -1,30 +1,78 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+
+  /* Light theme palette */
+  --bg:        #f5f3ee;       /* warm parchment */
+  --bg-alt:    #eceae3;       /* slightly deeper parchment for alt sections */
+  --surface:   #ffffff;       /* card surface */
+  --surface-2: #f0ede6;       /* secondary surface */
+  --border:    #e0dbd0;       /* subtle border */
+
+  /* Text */
+  --text-head: #1c1a14;       /* near-black for headings */
+  --text-body: #4a4535;       /* warm dark brown for body */
+  --text-muted:#8c8370;       /* muted label text */
+
+  /* Accent — amber / saffron */
+  --amber-warm: #c9751a;      /* primary amber — readable on light */
+  --amber-light:#e8943a;      /* hover / highlight */
+  --amber-pale: #fdf0e0;      /* very light amber tint for badges */
+  --amber-border:#e4c190;     /* amber border tint */
+
+  /* Teal accent for variety */
+  --teal:       #2a7d6f;
+  --teal-pale:  #e6f4f1;
+
+  /* Green for active status */
+  --green:      #2d7a4f;
+  --green-pale: #e6f4ec;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+* { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
+  font-size: 15px; /* slightly smaller base */
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-body);
+  font-family: var(--font-dm-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-alt); }
+::-webkit-scrollbar-thumb { background: var(--amber-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--amber-warm); }
+
+/* Section reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Amber underline link */
+.amber-link {
+  color: var(--amber-warm);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.amber-link:hover {
+  border-bottom-color: var(--amber-warm);
 }

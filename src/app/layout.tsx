@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/src/components/Navbar";
-import Footer from "@/src/components/Footer";
 
 export const metadata: Metadata = {
   title: "Sandesh Paudel | Portfolio",
@@ -21,7 +20,6 @@ export default function RootLayout({
         <main className="flex-1 container mx-auto px-4 py-8">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
