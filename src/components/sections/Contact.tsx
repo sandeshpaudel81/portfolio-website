@@ -18,7 +18,7 @@ export default function Contact() {
       id="contact"
       ref={ref}
       className="py-28 px-6"
-      style={{ background: 'rgba(13,20,36,0.5)' }}
+      style={{ background: 'rgba(232,162,67,0.1)' }}
     >
       <div className="max-w-4xl mx-auto text-center">
         <div className="reveal flex items-center gap-4 mb-16 justify-center">
@@ -53,7 +53,7 @@ export default function Contact() {
           <a
             href="mailto:sandeshpaudel@example.com"
             className="px-8 py-3.5 rounded text-sm font-medium transition-all duration-200"
-            style={{ background: 'var(--amber-warm)', color: 'var(--ink-950)' }}
+            style={{ background: 'var(--amber-warm)', color: 'white' }}
             onMouseEnter={(e) =>
               ((e.currentTarget as HTMLElement).style.background = 'var(--amber-light)')
             }
@@ -61,10 +61,10 @@ export default function Contact() {
               ((e.currentTarget as HTMLElement).style.background = 'var(--amber-warm)')
             }
           >
-            Send an Email
+            Send me an Email
           </a>
           <a
-            href="https://linkedin.com/in/sandeshpaudel"
+            href="https://au.linkedin.com/in/sandesh-paudel-601508149"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded text-sm font-medium transition-all duration-200"
@@ -85,7 +85,7 @@ export default function Contact() {
             LinkedIn
           </a>
           <a
-            href="https://github.com/sandeshpaudel"
+            href="https://github.com/sandeshpaudel81"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded text-sm font-medium transition-all duration-200"
@@ -111,7 +111,7 @@ export default function Contact() {
         <div
           className="reveal rounded-2xl p-6 md:p-8 text-left"
           style={{
-            background: 'rgba(19,29,53,0.7)',
+            background: 'rgba(216, 216, 216, 0.6)',
             border: '1px solid rgba(232,162,67,0.2)',
           }}
         >
