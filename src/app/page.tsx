@@ -1,22 +1,18 @@
-import Hero from '@/src/components/sections/Hero';
-import Contact from '../components/sections/Contact';
-import About from '../components/sections/About';
-import Education from '../components/sections/Education';
-import Projects from '../components/sections/Projects';
-import Research from '../components/sections/Research';
-import Skills from '../components/sections/Skills';
-import Footer from '../components/Footer';
+import Header from "@/src/components/sections/Header";
+import Research from "@/src/components/sections/Research";
+import Projects from "@/src/components/sections/Projects";
+import Publications from "@/src/components/sections/Publications";
+import Footer from "@/src/components/sections/Footer";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <Education />
-      <Projects />
-      <Research />
-      <Skills />
-      <Contact />
+      <Header />
+      <main>
+        <Research />
+        <Projects />
+        <Publications />
+      </main>
       <Footer />
     </>
   );
