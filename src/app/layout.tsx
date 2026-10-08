@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import '@/src/app/globals.css';
 
 export const metadata: Metadata = {
-  title: "Sandesh Paudel | Portfolio",
+  title: "Sandesh Prasad Paudel | AI Researcher",
   description:
-    "Portfolio of Sandesh Paudel – Data Science, Full Stack Development, and Software Engineering projects.",
+    "Sandesh Prasad Paudel: Data Scientist and AI Researcher. Explore my research, projects, and publications in the field of Artificial Intelligence.",
 };
 
 export default function RootLayout({

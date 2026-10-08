@@ -20,6 +20,7 @@ export default function Header() {
             <a href="#research">Research</a>
             <a href="#projects">Projects</a>
             <a href="#publications">Publications</a>
+            <a href={profile.cv} target="_blank" rel="noreferrer">CV</a>
             <a href="#contact">Contact</a>
           </nav>
         </div>
@@ -34,8 +35,11 @@ export default function Header() {
             <p className="hero-bio">{profile.bio}</p>
 
             <div className="hero-actions">
-              <a className="button button-primary" href="#research">
-                Explore research
+              <a className="button button-primary" href={profile.cv} target="_blank" rel="noreferrer">
+                Download CV (PDF)
+              </a>
+              <a className="button button-secondary" href="#projects">
+                Research projects
               </a>
               <a className="button button-secondary" href={`mailto:${profile.email}`}>
                 Get in touch
@@ -53,7 +57,7 @@ export default function Header() {
             <div className="photo-frame">
               <Image
                 src={profile.photo}
-                alt="Professional photo placeholder for Sandesh Prasad Paudel"
+                alt="Sandesh Prasad Paudel"
                 fill
                 priority
                 sizes="(max-width: 800px) 70vw, 330px"
@@ -62,7 +66,7 @@ export default function Header() {
 
             <div className="hero-meta">
               <div>
-                <span>Current</span>
+                <span>Latest degree</span>
                 <strong>{education[0].degree}</strong>
                 <small>{education[0].institution}</small>
               </div>

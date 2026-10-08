@@ -10,7 +10,7 @@ export default function Projects() {
             <h2 className="section-title">Projects & research</h2>
           </div>
           <p className="section-intro">
-            A selection of academic, research and applied data science work.
+            Research projects first, then applied work. Each research project links to its code.
           </p>
         </div>
 
@@ -31,15 +31,21 @@ export default function Projects() {
 
                 <p className="project-description">{project.description}</p>
 
-                {project.link && (
-                  <a
-                    className="text-link"
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View project / preprint <span>↗</span>
-                  </a>
+                {project.result && (
+                  <p className="project-description">
+                    <strong>Result: </strong>
+                    {project.result}
+                  </p>
+                )}
+
+                {project.links.length > 0 && (
+                  <div style={{ display: "flex", flexWrap: "wrap", columnGap: 20 }}>
+                    {project.links.map((l) => (
+                      <a className="text-link" key={l.url} href={l.url} target="_blank" rel="noreferrer">
+                        {l.label} <span>↗</span>
+                      </a>
+                    ))}
+                  </div>
                 )}
               </div>
             </article>

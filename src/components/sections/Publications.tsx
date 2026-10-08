@@ -7,10 +7,7 @@ export default function Publications() {
         <div className="section-heading">
           <p className="eyebrow">03 · Publications</p>
           <h2 className="section-title">Research output</h2>
-          <p className="section-intro">
-            Publications and preprints will be maintained here as the research
-            portfolio develops.
-          </p>
+          <p className="section-intro">Preprints and reports.</p>
         </div>
 
         <div className="publication-list">
@@ -24,15 +21,14 @@ export default function Publications() {
                 <p>{publication.authors}</p>
                 <p className="publication-venue">{publication.venue}</p>
 
-                {publication.link && (
-                  <a
-                    className="text-link"
-                    href={publication.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Read preprint <span>↗</span>
-                  </a>
+                {publication.links.length > 0 && (
+                  <div style={{ display: "flex", flexWrap: "wrap", columnGap: 20 }}>
+                    {publication.links.map((l) => (
+                      <a className="text-link" key={l.url} href={l.url} target="_blank" rel="noreferrer">
+                        {l.label} <span>↗</span>
+                      </a>
+                    ))}
+                  </div>
                 )}
               </div>
             </article>
@@ -40,7 +36,7 @@ export default function Publications() {
         </div>
 
         <div className="scholar-note">
-          <span>More publications</span>
+          <span>Profile</span>
           <a
             href="https://scholar.google.com/citations?hl=en&user=xyNBkewAAAAJ"
             target="_blank"
