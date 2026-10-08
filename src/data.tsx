@@ -22,12 +22,12 @@ export type Publication = {
 export const profile = {
   name: "Sandesh Prasad Paudel",
   shortName: "Sandesh Paudel",
-  headline: "Data Scientist · Interpretable Machine Learning · Healthcare AI",
+  headline: "AI Researcher | Data Scientist | Machine Learning Engineer",
   location: "Sydney, Australia",
   email: "sandeshpaudel81@gmail.com",
   cv: "/Sandesh_Paudel_CV.pdf",
   bio:
-    "I recently completed a Master of Information Technology at Charles Darwin University, after a Bachelor in Computer Engineering. I work on interpretable and leakage-safe machine learning for clinical data: longitudinal risk prediction with causal analysis, and radiomics-deep learning fusion for mammography. I am seeking a PhD in medical AI and health informatics.",
+    "I recently completed a Master of Data Science at Charles Darwin University, after a Bachelor in Computer Engineering. I work on interpretable and leakage-safe machine learning for clinical data: longitudinal risk prediction with causal analysis, and radiomics-deep learning fusion for mammography. I am seeking a PhD in medical AI and health informatics.",
   photo: "/sandesh.png",
   links: {
     github: "https://github.com/sandeshpaudel81",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
   {
     id: "03",
     title: "Mero Nagarikta: Nepali Citizenship Card Data Extraction",
-    subtitle: "B.E. final-year project · arXiv preprint · 2024",
+    subtitle: "B.E. final-year project · arXiv preprint · 2024 · My role: backend (model training and inference API)",
     tags: ["YOLOv8", "OCR", "PyTesseract", "Low-resource language", "Flutter"],
     description:
       "A pipeline that detects text fields on Nepali citizenship cards with a fine-tuned YOLOv8 model, reads them with Nepali-optimised PyTesseract and post-correction, and serves results through a mobile app.",
@@ -96,11 +96,11 @@ export const projects: Project[] = [
   },
   {
     id: "04",
-    title: "Air Quality Anomaly Detection",
-    subtitle: "Other project · AWS",
-    tags: ["Time series", "Anomaly detection", "AWS"],
+    title: "Air-Quality Pollution-Event Detection",
+    subtitle: "Machine Learning Engineer · AWS data science project · ongoing",
+    tags: ["Anomaly detection", "Isolation Forest / LOF / DBSCAN", "AWS S3 · Glue · Athena · Lambda"],
     description:
-      "Detecting unusual air-quality patterns from environmental sensor data using temporal features, station-level baselines and multi-sensor relationships.",
+      "I own the layer-2 pollution-event detection stage of a bronze/silver/gold data pipeline on AWS (S3, Glue, Athena, Lambda, IAM): EDA on silver-layer sensor data, feature engineering, an unsupervised anomaly-detection ensemble (Isolation Forest, Local Outlier Factor, DBSCAN), model evaluation, and alert scores written to the gold table.",
     links: [],
   },
   {
@@ -150,20 +150,14 @@ export const publications: Publication[] = [
 export const skills = [
   "Machine Learning",
   "Deep Learning",
-  "Artificial Intelligence",
-  "Large Language Models",
-  "Generative AI",
-  "Retrieval-Augmented Generation",
-  "Natural Language Processing",
-  "Computer Vision",
+  "Interpretable ML",
   "Medical Imaging",
-  "Data Science",
   "Python",
+  "PyTorch",
   "SQL",
-  "Data Analysis",
-  "Data Visualisation",
-  "MLOps",
-  "Cloud & AWS",
+  "AWS (IAM, S3, Glue, Athena, Lambda, Redshift)",
+  "Retrieval-Augmented Generation (RAG)",
+  "Power BI",
 ];
 
 export const experience: { role: string; organisation: string; period: string }[] = [];
